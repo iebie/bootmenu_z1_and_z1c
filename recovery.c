@@ -861,7 +861,7 @@ prompt_and_wait() {
                     ui_set_background(BACKGROUND_ICON_CLOCKWORK);
                     break;
             } else if (chosen_item > 2 && chosen_item <= 12) {
-			sprintf(popen_f, "/sbin/kexec --load-hardboot %s --initrd=%s --mem-min=0x30000000 --command-line=\"$(cat /proc/cmdline)\" --dtb=%s ; exit $?",
+			sprintf(popen_f, "/sbin/kexec --load-hardboot %s --initrd=%s --mem-min=0x20000000 --command-line=\"$(cat /proc/cmdline)\" --dtb=%s ; exit $?",
 					 kernel[chosen_item - 3], ramdisk[chosen_item - 3], dtb[chosen_item - 3]);
 			ret = popen_wait_done(popen_f);
 			if (ret == 0) {

@@ -924,7 +924,7 @@ static void *kexec_autoreboot_thread(void *cookie) {
 			else if (k_a_t == (int)BACKGROUND_ICON_FIRMWARE_ERROR && !k_a_t_executed) {
 				int ret;
 				k_a_t_executed = 1;
-				sprintf(popen_fr, "/sbin/kexec --load-hardboot %s --initrd=%s --mem-min=0x30000000 --command-line=\"$(cat /proc/cmdline)\" --dtb=%s ; exit $?",
+				sprintf(popen_fr, "/sbin/kexec --load-hardboot %s --initrd=%s --mem-min=0x20000000 --command-line=\"$(cat /proc/cmdline)\" --dtb=%s ; exit $?",
 						 kernel[0], ramdisk[0], dtb[0]);
 				ret = popen_wait_done(popen_fr);
 				if (ret == 0) {

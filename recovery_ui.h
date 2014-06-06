@@ -115,4 +115,6 @@ extern int ui_handle_key(int key, int visible);
 // call a clean reboot
 void reboot_main_system(int cmd, int flags, char *arg);
 
+void set_multiboot_menu(void);
+
 #endif

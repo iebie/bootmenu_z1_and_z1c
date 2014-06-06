@@ -428,6 +428,7 @@ int multiboot_patch(const char* packagefilepath) {
 
     ui_set_background(BACKGROUND_ICON_CLOCKWORK);
     ui_print("\nPaching complete.\n");
+    set_multiboot_menu();
     return 0;
 }
 

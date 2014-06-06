@@ -36,7 +36,7 @@ char cmdline[10][350];
 char dtb[10][350];
 int is_not_empty = 1;
 
-static void set_multiboot_menu(void) {
+void set_multiboot_menu(void) {
 
 	char section[20];
 	char key[20];
